@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS books (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
+    description TEXT NOT NULL,
     author TEXT,
     owner_id INT REFERENCES users(id),
     created_at TIMESTAMP DEFAULT NOW()
